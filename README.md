@@ -1,3 +1,25 @@
+# GoLang JWT Authentication
+
+Youtube video: https://www.youtube.com/watch?v=d4Y2DkKbxM0
+
+Simple Golang backend application using [gofiber](https://github.com/gofiber/fiber), a Node.js Express inspired web framework for Go.
+
+This backend application will come together whit a simple React frontend. 
+
+Go modules used:
+- gorm.io/gorm
+- github.com/gofiber/fiber/v2
+- gorm.io/driver/mysql
+- gorm.io/gorm
+
+## Run
+
+```shell
+go mod init github.com/mattiadevivo/go-lang
+go mod tidy # equivalent to npm install in nodejs
+source example.env # load env vars
+```
+
 # INIT
 
 Start a new go project with the following command:
