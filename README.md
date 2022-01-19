@@ -17,8 +17,12 @@ Go modules used:
 ```shell
 go mod init github.com/mattiadevivo/go-lang
 go mod tidy # equivalent to npm install in nodejs
-source example.env # load env vars
+go run main.go
 ```
+
+## Reminder
+
+Remind that shell variables are not exported to child processes by default, so you need to export them by using `export MYSQL_PORT=3306` to retrieve them by using `os.Getenv("MYSQL_PORT")`
 
 # INIT
 
