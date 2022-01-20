@@ -11,6 +11,8 @@ Go modules used:
 - github.com/gofiber/fiber/v2
 - gorm.io/driver/mysql
 - gorm.io/gorm
+- golang.org/x/crypto/bcrypt
+- 
 
 ## Run
 
