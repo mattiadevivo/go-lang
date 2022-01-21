@@ -22,6 +22,17 @@ go mod tidy # equivalent to npm install in nodejs
 go run main.go
 ```
 
+## React Frontend
+
+The go web api is shipped with a simple frontend written using React and Typescript.
+
+
+```shell
+
+npx create-react-app react-auth --template typescript
+```
+> If you've previously installed `create-react-app` globally via `npm install -g create-react-app`, we recommend you uninstall the package using `npm uninstall -g create-react-app` or `yarn global remove create-react-app` to ensure that `npx` always uses the latest version.
+
 ## Reminder
 
 Remind that shell variables are not exported to child processes by default, so you need to export them by using `export MYSQL_PORT=3306` to retrieve them by using `os.Getenv("MYSQL_PORT")`
