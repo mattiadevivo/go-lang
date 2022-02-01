@@ -1,13 +1,14 @@
 import React from 'react';
 
 const Login = () => {
-    return (<div>
+    return (
+    <div>
         <form>
             <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
-                <input type="email" className="form-control" placeholder="name@example.com" />
+            <input type="email" className="form-control" placeholder="name@example.com" />
 
 
-                <input type="password" className="form-control" placeholder="Password" />
+            <input type="password" className="form-control" placeholder="Password" />
 
 
             <div className="checkbox mb-3">

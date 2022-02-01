@@ -1,6 +1,5 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Nav from './components/Nav';
 import Home from './pages/Home';
@@ -10,22 +9,18 @@ import Register from './pages/Register';
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <main className="form-signin">
-        <Switch>
-          <Route path="/login">
-            <Login/>
-          </Route>
-          <Route path="/register">
-            <Register />
-          </Route>
-          <Route path="/">
-            <Home/>
-          </Route>
-        </Switch>
-        <Login/>
-      </main>
-    </div>
+      <BrowserRouter>
+        <Nav />
+        <main className="form-signin">
+
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </main>
+      </BrowserRouter>
+    </div >
   );
 }
 
