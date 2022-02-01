@@ -28,7 +28,6 @@ The go web api is shipped with a simple frontend written using React and Typescr
 
 
 ```shell
-
 npx create-react-app react-auth --template typescript
 ```
 > If you've previously installed `create-react-app` globally via `npm install -g create-react-app`, we recommend you uninstall the package using `npm uninstall -g create-react-app` or `yarn global remove create-react-app` to ensure that `npx` always uses the latest version.
