@@ -1,0 +1,12 @@
+version: '3.3'
+# by default all containers will run inside parentdir_default network
+# .env file contains the name of the network that will be created for the apps in this docker-compose file
+# update the name by using --project-name <proj_name> flag
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:5.7
+    ports: 
+      - "127.0.0.1:3306:3306"
+    environment:
+      - "MYSQL_ROOT_PASSWORD=root"

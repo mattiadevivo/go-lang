@@ -1,7 +1,7 @@
 import React from "react";
 
-const Home = () => {
-    return (<div>Home</div>);
+const Home = (props: {name: string}) => {
+    return (<div>{props.name ? `Hi ${props.name}` : 'Not logged in'}</div>);
 };
 
 export default Home;

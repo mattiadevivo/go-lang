@@ -9,7 +9,7 @@ const Register = () => {
 
     const onSubmit = async (e: SyntheticEvent) => {
         e.preventDefault();
-        await fetch("http://localhost:8000/api/register", {
+        await fetch(process.env.REACT_APP_BACKEND_URL + "/api/register", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({name, email, password}),

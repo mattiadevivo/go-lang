@@ -20,14 +20,19 @@ func Register(c *fiber.Ctx) error {
 		return err
 	}
 
-	password, _ := bcrypt.GenerateFromPassword([]byte(data["password"]), 14)
+	password, err := bcrypt.GenerateFromPassword([]byte(data["password"]), 14)
+	if err != nil {
+		return err
+	}
 	user := models.User{
 		Name:     data["name"],
 		Email:    data["email"],
 		Password: password,
 	}
 
-	database.DB.Create(&user)
+	if err := database.DB.Create(&user).Error; err != nil {
+		return err
+	}
 	return c.JSON(user)
 }
 
@@ -100,6 +105,7 @@ func User(c *fiber.Ctx) error {
 
 	var user models.User
 
+	fmt.Println(claims)
 	database.DB.Where("id = ?", claims.Issuer).First(&user)
 	return c.JSON(user)
 }
